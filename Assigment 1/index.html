@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <title>Assignment 1</title>
+    </head>
+    <body>
+        <div id="mainBlock">
+            <header>
+                <div class="floatGroup">
+                    <img src="CSET_OWL.jpg" alt="CSET Owl" class="floatItem floatImage"/>
+                    <h1 class="floatItem floatHeader">Assignment 1</h1>
+                </div>  
+            </header> 
+            <nav>
+                <div class="flexContainer"> 
+                    <h3 class="flexItem">Oregon Tech</h3>
+                    <h3 class="flexItem">CSET</h3>
+                </div>
+            </nav>
+            <main>
+                <h2>About You</h2>
+                <form action="https://otapp-cstwebdev.azurewebsites.net/" method="post">
+                    <div class="gridContainer">
+                        <div class="gridItem1">
+                            <label class="gridFlexItem" for="StudentID">Student ID</label>
+                            <input class="gridFlexItem" type="text" name="StudentID" id="StudentID" placeholder="918..." maxlength="9">
+                        </div>
+                        <div class="gridItem2">
+                            <label class="gridFlexItem" for="Name">Name</label>
+                            <input class="gridFlexItem" type="text" id="Name" name="Name">
+                        </div>
+                        <div class="gridItem1">
+                            <label class="gridFlexItem" for="EmailAddress">Email Address</label>
+                            <input class="gridFlexItem" type="email" name="EmailAddress" id="EmailAddress">
+                        </div>
+                        <div class="gridItem2">
+                            <label class="gridFlexItem" for="Hobby">Hobby</label>
+                            <input class="gridFlexItem" type="text" name="Hobby" id="Hobby">
+                        </div>
+                        <div class="gridItem1">
+                            <label class="gridFlexItem" for="UserType">User Type</label>
+                            <select class="gridFlexItem" id="UserType" name="UserType">
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
+                        <div class="gridItem2">
+                            <label class="gridFlexItem" for="Band">Band</label>
+                            <input class="gridFlexItem" type="text" name="Band" id="Band">
+                        </div>
+                        <div class="gridItem3">
+                            <label class="gridFlexItem" for="Biography">Biography</label>
+                            <textarea class="gridFlexItem" name="Biography" id="Biography"></textarea>
+                        </div>
+                        <div class="gridItem4">
+                            <label class="gridFlexItem" for="CoursePrefix">Course Prefix</label>
+                            <input class="gridFlexItem" type="text" name="CoursePrefix" id="CoursePrefix" maxlength="4">
+                        </div>
+                        <div class="gridItem5">
+                            <label class="gridFlexItem" for="CourseNumber">Course Number</label>
+                            <input class="gridFlexItem" type="text" name="CourseNumber" id="CourseNumber" maxlength="3">
+                        </div>
+                        <div class="gridItem6">
+                            <label class="gridFlexItem" for="CourseDescription">Course Description</label>
+                            <input class="gridFlexItem" type="text" name="CourseDescription" id="CourseDescription">
+                        </div>
+                        <input class="gridItem7" type="submit" value="Submit">
+                    </div>
+                    <input type="hidden" name="Nickname" value="Nick">
+                </form>
+            </main>   
+        </div>
+        <footer>
+            &copy;CSET, All Rights Reserved
+        </footer>
+    </body>
+</html>
