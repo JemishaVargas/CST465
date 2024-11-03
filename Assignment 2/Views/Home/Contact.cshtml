@@ -1,0 +1,15 @@
+@model Assignment_2.ContactModel;
+
+<div class="container-fluid">
+    <h1>Contact Results</h1>
+
+    @Html.DisplayFor(Model => Model.FirstName)
+    @Html.DisplayFor(Model => Model.LastName)
+    <br>
+    @Html.DisplayFor(Model => Model.Address)
+    <br>
+    @Html.DisplayFor(Model => Model.City),
+    @Html.DisplayFor(Model => Model.State)
+    <br>
+    @Html.DisplayFor(Model => Model.Zip)
+</div>

@@ -1,5 +1,5 @@
+namespace Assignment_2;
 public class HomeController : Controller
-
 {
 
     [Route("")]
@@ -7,20 +7,34 @@ public class HomeController : Controller
 
     {
         ViewData["Title"] = "Home";
-         return View(); 
+        return View(); 
 
     }
+
+    [HttpGet]
     [Route("ContactHTML")]
     public IActionResult ContactHTML()
     {
+        ContactModel model = new ContactModel();
         ViewData["Title"] = "ContactHTML";
-        return View();
+        return View(model);
     }
+
+    [HttpGet]
     [Route("ContactTagHelper")]
     public IActionResult ContactTagHelper()
     {
+        ContactModel model = new ContactModel();
         ViewData["Title"] = "ContactTagHelper";
-        return View();
+        return View(model);
+    }
+
+    [HttpPost]
+    [Route("ContactResult")]
+    public IActionResult Contact(ContactModel model)
+    {
+        ViewData["Title"] = "ContactResults";
+        return View(model);
     }
 
 }
