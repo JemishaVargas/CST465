@@ -1,0 +1,25 @@
+using System;
+using System.Configuration;
+using System.Data.SqlClient;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+
+namespace Assignment3
+{
+    public class HomeController : Controller
+    {
+        private readonly IConfiguration _Config;
+        public HomeController(IConfiguration configuration)
+        {
+            _Config = configuration;
+        }
+        public IActionResult Index()
+        {
+            ViewBag.Title = "Assignment 3";
+            var conString = _Config["ConnectionStrings:DB_BlogPosts"];
+
+            return View((object)conString);
+        }
+        
+    }
+}

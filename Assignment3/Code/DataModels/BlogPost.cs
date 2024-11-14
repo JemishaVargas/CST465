@@ -1,0 +1,11 @@
+using Assignment3;
+
+namespace Assignment3;
+public class BlogPost : IDataEntity
+{
+    public int ID { get; set; }
+    public DateTime Timestamp { get; set; }
+    public string Author {get; set;}
+    public string Title {get; set;}
+    public string Content {get; set;}
+}

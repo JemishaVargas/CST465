@@ -4,7 +4,6 @@ public class HomeController : Controller
 
     [Route("")]
     public IActionResult Index() 
-
     {
         ViewData["Title"] = "Home";
         return View(); 
