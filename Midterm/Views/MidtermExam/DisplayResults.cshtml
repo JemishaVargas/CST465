@@ -1,0 +1,16 @@
+@using Midterm
+@model List<TestQuestionModel>
+@foreach (TestQuestionModel question in Model)
+{
+    <h2>@question.Question</h2>
+    if(question is MultipleChoiceQuestionModel)
+    {
+        <ul>
+        @foreach(string choice in question.Choices)
+        {
+            <li>@choice</li>
+        }
+        </ul>
+    }
+    <p class="text-primary">Your Answer: @question.Answer</p>
+}

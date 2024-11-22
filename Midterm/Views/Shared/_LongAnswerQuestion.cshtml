@@ -1,0 +1,5 @@
+@model LongAnswerQuestionModel
+<h2>@Model.Question</h2>
+        <textarea class="form-control" rows="3" asp-for="Answer"></textarea>
+        <input type="hidden" asp-for="ID" value="@Model.ID"/>
+        <span asp-validation-for="Answer" class="text-danger"></span>
