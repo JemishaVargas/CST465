@@ -6,7 +6,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
 {
-    config.AddJsonFile("JSON/Sample.json");
+    config.AddJsonFile("JSON/MidtermQuestions.json");
 });
 
 builder.Services.Configure<MidtermExam>(builder.Configuration.GetSection("MidtermExam"));
