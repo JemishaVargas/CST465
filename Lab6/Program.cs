@@ -6,8 +6,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.Configure<HeaderOptions>(builder.Configuration.GetSection("Headers"));
 
 var app = builder.Build();
-//app.UseConfiggedHeaders();
-app.UseOregonTechRedirect();
+app.UseConfiggedHeaders();
+//app.UseOregonTechRedirect();
 app.MapDefaultControllerRoute();
 
 app.Run();

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Lab8.DataObjects.ImageObject>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="row">
+        @foreach(var obj in Model)
+        {
+            <div class="col-3">
+                <img src="/Image/@obj.ID/" width="300" height="300"/>
+                <p>@obj.Description</p>
+            </div>
+        }
+    </div>
+</div>

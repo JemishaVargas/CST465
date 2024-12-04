@@ -17,8 +17,8 @@ public class ErrorController : Controller
         }
         else if (statusCode == 404)
         {
-
+            return View("404Error");
         }
-        return View("404Error");
+        return View(statusCode);
     }
 }

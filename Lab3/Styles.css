@@ -12,28 +12,30 @@ header{
     background-color: #ffd24f;
     
 }
-.group
-{
-    display: flex;
-    flex-wrap: wrap;
-}
 .container
 {
     flex-direction: column;
 }
-#mainMenu .group
+#mainMenu ul
 {   
-    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
 }
-#mainMenu .group li{
-    flex: 0 1 auto;  
+#mainMenu ul li{
+    flex-grow: 1;  
+    flex-basis: 0;
+    text-align: center;
 }
-#mainMenu .group li a{
+#mainMenu ul li a{
     text-decoration: none;
+    display: block;
+    padding: 10px 0;
 }
 ul {
     list-style-type: none;
-  }
+    margin: 0;
+    padding: 0;
+}
 .group:after {
     content: "";
     display: table;
@@ -55,10 +57,16 @@ h1{
 #products{
     width: 75%;
 }
-.productlist .group{
-    justify-content: left;
+main{
+    display: flex;
+    flex-wrap: wrap;
 }
-.productlist .group li{
+.productlist ul{
+    justify-content: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+.productlist ul li{
     flex: 0 1 auto;  
     border-style: solid;
     border-color: black;

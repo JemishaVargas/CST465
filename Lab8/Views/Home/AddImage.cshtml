@@ -1,0 +1,11 @@
+@model ImageModel
+@{
+    ViewData["Title"] = "Add Image";
+}
+<form asp-action="AddImage" asp-controller="Home" enctype="multipart/form-data" method="post">
+    <label asp-for="File"></label>
+    <input type="file" asp-for="File"/>
+    <label asp-for="Description"></label>
+    <input type="text" asp-for="Description"/>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
